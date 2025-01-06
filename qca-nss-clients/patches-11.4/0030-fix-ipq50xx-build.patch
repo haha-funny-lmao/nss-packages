@@ -1,0 +1,18 @@
+--- a/bridge/nss_bridge_mgr.c
++++ b/bridge/nss_bridge_mgr.c
+@@ -1373,6 +1373,7 @@ static struct notifier_block nss_bridge_
+  * nss_bridge_mgr_is_physical_dev()
+  *	Check if the device is on physical device.
+  */
++#if defined(NSS_BRIDGE_MGR_PPE_SUPPORT)
+ static bool nss_bridge_mgr_is_physical_dev(struct net_device *dev)
+ {
+ 	struct net_device *root_dev = dev;
+@@ -1596,6 +1597,7 @@ static struct ctl_table nss_bridge_mgr_t
+ 	},
+ 	{ }
+ };
++#endif
+ 
+ /*
+  * nss_bridge_mgr_init_module()
