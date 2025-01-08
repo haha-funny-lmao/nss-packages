@@ -5,7 +5,7 @@ comment "Build Options"
 
 choice
   prompt "Memory Profile"
-  default NSS_MEM_PROFILE_HIGH
+  default NSS_MEM_PROFILE_MEDIUM
   help
   	This option allows you to select the memory profile.
   	It should correspond to the total RAM of your board.
